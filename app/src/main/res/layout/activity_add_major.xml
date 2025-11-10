@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMajor">
+
+    <TextView
+        android:id="@+id/AM_tv_v_error_emptyFields"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Please fill in all fields"
+        android:textColor="#D60000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AM_btn_v_back"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/AM_btn_v_add"
+        android:layout_width="120dp"
+        android:layout_height="64dp"
+        android:text="Add"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/AM_btn_v_back"
+        app:layout_constraintTop_toTopOf="@+id/AM_btn_v_back" />
+
+    <Button
+        android:id="@+id/AM_btn_v_back"
+        android:layout_width="120dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="160dp"
+        android:text="Back"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/AM_btn_v_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AM_et_v_prefix" />
+
+    <TextView
+        android:id="@+id/AM_tv_v_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Major Name"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/AM_et_v_name"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/AM_et_v_name"
+        app:layout_constraintTop_toBottomOf="@+id/AM_tv_v_addMajor" />
+
+    <TextView
+        android:id="@+id/AM_tv_v_prefix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Major Prefix"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/AM_et_v_prefix"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/AM_et_v_prefix"
+        app:layout_constraintTop_toBottomOf="@+id/AM_et_v_name" />
+
+    <EditText
+        android:id="@+id/AM_et_v_name"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AM_tv_v_name" />
+
+    <EditText
+        android:id="@+id/AM_et_v_prefix"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/AM_et_v_name"
+        app:layout_constraintTop_toBottomOf="@+id/AM_tv_v_prefix" />
+
+    <TextView
+        android:id="@+id/AM_tv_v_addMajor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Add Major"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/AM_tv_v_error_nameExists"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Major name already exists"
+        android:textColor="#C10000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/AM_et_v_name"
+        app:layout_constraintStart_toStartOf="@+id/AM_et_v_name"
+        app:layout_constraintTop_toBottomOf="@+id/AM_et_v_name"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/AM_tv_v_error_prefixExists"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Major prefix already exists"
+        android:textColor="#C10000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/AM_et_v_prefix"
+        app:layout_constraintStart_toStartOf="@+id/AM_et_v_prefix"
+        app:layout_constraintTop_toBottomOf="@+id/AM_et_v_prefix"
+        tools:visibility="invisible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

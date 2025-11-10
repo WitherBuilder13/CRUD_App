@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FindStudents">
+
+    <Spinner
+        android:id="@+id/FS_sp_v_major"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="@+id/FS_et_v_lastName"
+        app:layout_constraintTop_toBottomOf="@+id/FS_tv_v_major" />
+
+    <Button
+        android:id="@+id/FS_btn_v_back"
+        android:layout_width="120dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="4dp"
+        android:text="Back"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FS_lv_v_foundStudents" />
+
+    <EditText
+        android:id="@+id/FS_et_v_firstName"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/FS_et_v_lastName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FS_tv_v_firstName" />
+
+    <EditText
+        android:id="@+id/FS_et_v_username"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/FS_et_v_firstName"
+        app:layout_constraintTop_toBottomOf="@+id/FS_tv_v_username" />
+
+    <EditText
+        android:id="@+id/FS_et_v_lastName"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/FS_et_v_firstName"
+        app:layout_constraintTop_toTopOf="@+id/FS_et_v_firstName" />
+
+    <TextView
+        android:id="@+id/FS_tv_v_lastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/FS_et_v_lastName"
+        app:layout_constraintStart_toStartOf="@+id/FS_et_v_lastName"
+        app:layout_constraintTop_toTopOf="@+id/FS_tv_v_firstName" />
+
+    <TextView
+        android:id="@+id/FS_tv_v_firstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="First Name"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/FS_et_v_firstName"
+        app:layout_constraintStart_toStartOf="@+id/FS_et_v_firstName"
+        app:layout_constraintTop_toBottomOf="@+id/FS_tv_v_findStudents" />
+
+    <TextView
+        android:id="@+id/FS_tv_v_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Username"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/FS_et_v_username"
+        app:layout_constraintStart_toStartOf="@+id/FS_et_v_username"
+        app:layout_constraintTop_toBottomOf="@+id/FS_et_v_firstName" />
+
+    <TextView
+        android:id="@+id/FS_tv_v_gpaMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Min GPA"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/FS_et_v_gpaMin"
+        app:layout_constraintStart_toStartOf="@+id/FS_et_v_gpaMin"
+        app:layout_constraintTop_toBottomOf="@+id/FS_et_v_username" />
+
+    <TextView
+        android:id="@+id/FS_tv_v_gpaMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Max GPA"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/FS_et_v_gpaMax"
+        app:layout_constraintStart_toStartOf="@+id/FS_et_v_gpaMax"
+        app:layout_constraintTop_toTopOf="@+id/FS_tv_v_gpaMin" />
+
+    <TextView
+        android:id="@+id/FS_tv_v_major"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Major"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/FS_sp_v_major"
+        app:layout_constraintStart_toStartOf="@+id/FS_sp_v_major"
+        app:layout_constraintTop_toTopOf="@+id/FS_tv_v_username" />
+
+    <TextView
+        android:id="@+id/FS_tv_v_findStudents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Find Students"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/FS_lv_v_foundStudents"
+        android:layout_width="403dp"
+        android:layout_height="277dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FS_et_v_gpaMin" />
+
+    <EditText
+        android:id="@+id/FS_et_v_gpaMin"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/FS_et_v_username"
+        app:layout_constraintTop_toBottomOf="@+id/FS_tv_v_gpaMin" />
+
+    <EditText
+        android:id="@+id/FS_et_v_gpaMax"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/FS_sp_v_major"
+        app:layout_constraintTop_toBottomOf="@+id/FS_tv_v_gpaMax" />
+</androidx.constraintlayout.widget.ConstraintLayout>

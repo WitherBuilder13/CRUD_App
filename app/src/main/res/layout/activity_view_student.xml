@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewStudent">
+
+    <Button
+        android:id="@+id/VS_btn_v_back"
+        android:layout_width="120dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="24dp"
+        android:text="Back"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/VS_btn_v_update"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/VS_tv_v_major_value" />
+
+    <Button
+        android:id="@+id/VS_btn_v_update"
+        android:layout_width="130dp"
+        android:layout_height="64dp"
+        android:text="Update"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/VS_btn_v_back"
+        app:layout_constraintTop_toTopOf="@+id/VS_btn_v_back" />
+
+    <EditText
+        android:id="@+id/VS_alignmentLeft"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/VS_alignmentRight"
+        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/VS_alignmentRight"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/VS_alignmentLeft"
+        app:layout_constraintTop_toTopOf="@+id/VS_alignmentLeft" />
+
+    <TextView
+        android:id="@+id/VS_tv_v_studentInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Student Info"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/VS_tv_v_firstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="First Name"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/VS_alignmentLeft"
+        app:layout_constraintStart_toStartOf="@+id/VS_alignmentLeft"
+        app:layout_constraintTop_toBottomOf="@+id/VS_tv_v_studentInfo" />
+
+    <TextView
+        android:id="@+id/VS_tv_v_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Username"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/VS_tv_v_firstName"
+        app:layout_constraintStart_toStartOf="@+id/VS_tv_v_firstName"
+        app:layout_constraintTop_toBottomOf="@+id/VS_tv_v_firstName_value" />
+
+    <TextView
+        android:id="@+id/VS_tv_v_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Age"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/VS_tv_v_username"
+        app:layout_constraintStart_toStartOf="@+id/VS_tv_v_username"
+        app:layout_constraintTop_toBottomOf="@+id/VS_tv_v_username_value" />
+
+    <TextView
+        android:id="@+id/VS_tv_v_major"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Major"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/VS_tv_v_age_value" />
+
+    <TextView
+        android:id="@+id/VS_tv_v_gpa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPA"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/VS_tv_v_email"
+        app:layout_constraintStart_toStartOf="@+id/VS_tv_v_email"
+        app:layout_constraintTop_toTopOf="@+id/VS_tv_v_age" />
+
+    <TextView
+        android:id="@+id/VS_tv_v_lastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/VS_alignmentRight"
+        app:layout_constraintStart_toStartOf="@+id/VS_alignmentRight"
+        app:layout_constraintTop_toTopOf="@+id/VS_tv_v_firstName" />
+
+    <TextView
+        android:id="@+id/VS_tv_v_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/VS_tv_v_lastName"
+        app:layout_constraintStart_toStartOf="@+id/VS_tv_v_lastName"
+        app:layout_constraintTop_toTopOf="@+id/VS_tv_v_username" />
+
+    <TextView
+        android:id="@+id/VS_tv_v_firstName_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="-first name-"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/VS_tv_v_firstName"
+        app:layout_constraintStart_toStartOf="@+id/VS_tv_v_firstName"
+        app:layout_constraintTop_toBottomOf="@+id/VS_tv_v_firstName" />
+
+    <TextView
+        android:id="@+id/VS_tv_v_username_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="-username-"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/VS_tv_v_username"
+        app:layout_constraintStart_toStartOf="@+id/VS_tv_v_username"
+        app:layout_constraintTop_toBottomOf="@+id/VS_tv_v_username" />
+
+    <TextView
+        android:id="@+id/VS_tv_v_age_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="-age-"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/VS_tv_v_age"
+        app:layout_constraintStart_toStartOf="@+id/VS_tv_v_age"
+        app:layout_constraintTop_toBottomOf="@+id/VS_tv_v_age" />
+
+    <TextView
+        android:id="@+id/VS_tv_v_major_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="-major-"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/VS_tv_v_major"
+        app:layout_constraintStart_toStartOf="@+id/VS_tv_v_major"
+        app:layout_constraintTop_toBottomOf="@+id/VS_tv_v_major" />
+
+    <TextView
+        android:id="@+id/VS_tv_v_gpa_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-gpa-"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/VS_tv_v_gpa"
+        app:layout_constraintStart_toStartOf="@+id/VS_tv_v_gpa"
+        app:layout_constraintTop_toTopOf="@+id/VS_tv_v_age_value" />
+
+    <TextView
+        android:id="@+id/VS_tv_v_email_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-email-"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/VS_tv_v_email"
+        app:layout_constraintStart_toStartOf="@+id/VS_tv_v_email"
+        app:layout_constraintTop_toTopOf="@+id/VS_tv_v_username_value" />
+
+    <TextView
+        android:id="@+id/VS_tv_v_lastName_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-last name-"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/VS_tv_v_lastName"
+        app:layout_constraintStart_toStartOf="@+id/VS_tv_v_lastName"
+        app:layout_constraintTop_toTopOf="@+id/VS_tv_v_firstName_value" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
