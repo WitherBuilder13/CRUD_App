@@ -80,6 +80,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ArrayList<Student> students = new ArrayList<>();
 
         addStudentsToListFromDB(cursor, students);
+        cursor.close();
 
         return students;
     }
@@ -130,6 +131,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             major.setName(name);
             major.setPrefix(prefix);
 
+            cursor.close();
             db.close();
 
             return major;
@@ -154,6 +156,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         cursor.moveToFirst();
         int count = cursor.getInt(0);
+        cursor.close();
         db.close();
 
         return count != 0;
@@ -167,6 +170,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         cursor.moveToFirst();
         int count = cursor.getInt(0);
+        cursor.close();
         db.close();
 
         return count != 0;
@@ -180,6 +184,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         cursor.moveToFirst();
         int count = cursor.getInt(0);
+        cursor.close();
         db.close();
 
         return count != 0;
@@ -195,6 +200,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ArrayList<Student> foundStudents = new ArrayList<>();
         
         addStudentsToListFromDB(cursor, foundStudents);
+        cursor.close();
 
         return foundStudents;
     }
