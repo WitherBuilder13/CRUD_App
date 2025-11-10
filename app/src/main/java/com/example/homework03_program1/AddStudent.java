@@ -120,6 +120,7 @@ public class AddStudent extends AppCompatActivity {
             gpa = -1;
 
         tv_j_error_usernameExists.setVisibility(View.INVISIBLE);
+        tv_j_error_emptyFields.setVisibility(View.INVISIBLE);
 
         if (dbHelper.usernameExists(username))
             tv_j_error_usernameExists.setVisibility(View.VISIBLE);

@@ -78,7 +78,10 @@ public class UpdateStudent extends AppCompatActivity {
 
     private void initButtonClickListeners() {
         btn_j_addMajor.setOnClickListener(v -> startActivity(new Intent(UpdateStudent.this, AddMajor.class)));
-        btn_j_back.setOnClickListener(v -> finish());
+        btn_j_back.setOnClickListener(v -> {
+            clearAllEditTexts();
+            finish();
+        });
         btn_j_update.setOnClickListener(v -> updateStudent());
     }
 
@@ -132,6 +135,8 @@ public class UpdateStudent extends AppCompatActivity {
             gpa = Double.parseDouble(gpaS);
         else
             gpa = -1;
+
+        tv_j_error_emptyFields.setVisibility(View.INVISIBLE);
 
         if (!firstName.isEmpty() && !lastName.isEmpty() && !email.isEmpty() && age != -1 && gpa != -1) {
             student.setFirstName(firstName);

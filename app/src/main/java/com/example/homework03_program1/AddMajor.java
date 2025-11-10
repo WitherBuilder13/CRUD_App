@@ -64,22 +64,25 @@ public class AddMajor extends AppCompatActivity {
 
         boolean nameExists = dbHelper.majorComponentExists("majorName", majorName), prefixExists = dbHelper.majorComponentExists("majorPrefix", majorPrefix);
 
-        if (!majorName.isEmpty() && !majorPrefix.isEmpty()) {
-            if (nameExists || prefixExists) {
-                if (nameExists)
-                    tv_j_error_nameExists.setVisibility(View.VISIBLE);
-                if (prefixExists)
-                    tv_j_error_prefixExists.setVisibility(View.VISIBLE);
-            } else {
-                Major major = new Major();
+        tv_j_error_nameExists.setVisibility(View.INVISIBLE);
+        tv_j_error_prefixExists.setVisibility(View.INVISIBLE);
+        tv_j_error_emptyFields.setVisibility(View.INVISIBLE);
 
-                major.setName(majorName);
-                major.setPrefix(majorPrefix);
+        if (nameExists)
+            tv_j_error_nameExists.setVisibility(View.VISIBLE);
+        if (prefixExists)
+            tv_j_error_prefixExists.setVisibility(View.VISIBLE);
 
-                dbHelper.addMajorToDB(major);
+        if (!majorName.isEmpty() && !nameExists && !majorPrefix.isEmpty() && !prefixExists) {
+            Major major = new Major();
 
-                finish();
-            }
+            major.setName(majorName);
+            major.setPrefix(majorPrefix);
+
+            dbHelper.addMajorToDB(major);
+
+            clearEditTexts();
+            finish();
         } else
             tv_j_error_emptyFields.setVisibility(View.VISIBLE);
     }
