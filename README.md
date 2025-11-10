@@ -1,4 +1,5 @@
 # _Main Page_
+- First page that is opened on startup
 ### 3 Buttons 
 - _Add Student_ - add a new student
 - _Find Students_ - find all students that match criteria
